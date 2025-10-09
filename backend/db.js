@@ -7,6 +7,9 @@ const pool = new Pool({
   database: process.env.DB_NAME || 'luct_report_tumelo',
   password: process.env.DB_PASSWORD || 'your_password',
   port: process.env.DB_PORT || 5432,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 // Test database connection
